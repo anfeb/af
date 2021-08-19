@@ -39,7 +39,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'sticker': 'Stiker',
     'kerang': 'Kerang Ajaib',
     'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'admin': 'Admin',
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
@@ -55,6 +55,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
+    'owner': 'owner',
     '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
@@ -73,7 +74,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
+    'admin': 'Admin'
   }
   if (teks == 'grup') tags = {
     'group': 'Grup'

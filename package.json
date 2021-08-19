@@ -1,5 +1,5 @@
 {
-  "name": "stikerinbot",
+  "name": "anfebn",
   "version": "1.1.1",
   "description": "WhatsApp Bot Ringan",
   "main": "index.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariffb25/stikerinbot.git"
+    "url": "git+https://github.com/anfeb/stikerinbot.git"
   },
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "Ariffb",
+  "author": "anfebn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ariffb25/stikerinbot/issues"

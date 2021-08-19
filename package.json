@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anfeb/stikerinbot.git"
+    "url": "git+https://github.com/anfeb/afr.git"
   },
   "keywords": [
     "whatsapp-bot"

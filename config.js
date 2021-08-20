@@ -27,7 +27,7 @@ global.APIKeys = { // APIKey nya disini
 }
 
 // Sticker WM
-global.packname = 'Stickker By'
+global.packname = 'Sticker By'
 global.author = '@anfebn'
 
 global.wait = '_*Wait Kak*_'

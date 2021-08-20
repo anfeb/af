@@ -1,1 +1,1 @@
-web: node . --db 'https://json-server.nurutomo.repl.co/'
+node . --db 'https://json-server.nurutomo.repl.co/'

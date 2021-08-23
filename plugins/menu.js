@@ -3,19 +3,19 @@ let path = require('path')
 let levelling = require('../lib/levelling')
 const defaultMenu = {
   before: `
-┏━━  *〔 ${me} 〕*
-┃➸ Hai , ${name}!
+┏━━  *〔 ${%me} 〕*
+┃➸ Hai , ${%name}!
 ┃
-┃➸ Tersisa *${limit}*
-┃➸ Role *${role}*
-┃➸ level *${level}*
-┃➸ ${totalexp} XP secara Total
+┃➸ Tersisa *${%limit}*
+┃➸ Role *${%role}*
+┃➸ level *${%level}*
+┃➸ ${%totalexp} XP secara Total
 ┃
-┃➸ Tanggal: *${week}*, *${date}*
-┃➸ Tanggal Islam: *${dateIslamic}*
-┃➸ Waktu: *${time}*
-┃➸ Uptime: *${uptime}* 
-┃➸ Database: ${rtotalreg} dari ${totalreg}
+┃➸ Tanggal: *${%week}*, *${%date}*
+┃➸ Tanggal Islam: *${%dateIslamic}*
+┃➸ Waktu: *${%time}*
+┃➸ Uptime: *${%uptime}* 
+┃➸ Database: ${%rtotalreg} dari ${%totalreg}
 ┃➸ *Follow My Instagram*
 ┃➸ *https://instagram.com/anfebn*
 ┗━━━━━━━━

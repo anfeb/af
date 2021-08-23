@@ -3,19 +3,19 @@ let path = require('path')
 let levelling = require('../lib/levelling')
 const defaultMenu = {
   before: `
-┏━━  *〔 %me 〕*
-┃➸ Hai , %name!
+┏━━  *〔 ${me} 〕*
+┃➸ Hai , ${name}!
 ┃
-┃➸ Tersisa *%limit Limit*
-┃➸ Role *%role*
-┃➸ level *%level (%exp / %maxexp)* [%xp4levelup]
-┃➸ %totalexp XP secara Total
+┃➸ Tersisa *${limit}*
+┃➸ Role *${role}*
+┃➸ level *${level}*
+┃➸ ${totalexp} XP secara Total
 ┃
-┃➸ Tanggal: *%week , %date*
-┃➸ Tanggal Islam: *%dateIslamic*
-┃➸ Waktu: *%time*
-┃➸ Uptime: *%uptime (%muptime)*
-┃➸ Database: %rtotalreg dari %totalreg
+┃➸ Tanggal: *${week}*, *${date}*
+┃➸ Tanggal Islam: *${dateIslamic}*
+┃➸ Waktu: *${time}*
+┃➸ Uptime: *${uptime}* 
+┃➸ Database: ${rtotalreg} dari ${totalreg}
 ┃➸ *Follow My Instagram*
 ┃➸ *https://instagram.com/anfebn*
 ┗━━━━━━━━
@@ -130,8 +130,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!args[0]) {
     conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
-        "title": `${defaultMenu.before}`,
-        "description": "Made With @anfebn",
+        "title": "Follow Me",
+        "description": `${defaultMenu.before}`,
         "buttonText": "Klik Disini",
         "listType": "SINGLE_SELECT",
         "sections": [

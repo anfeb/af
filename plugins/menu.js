@@ -3,19 +3,19 @@ let path = require('path')
 let levelling = require('../lib/levelling')
 const defaultMenu = {
   before: `
-┏━━  *〔 ${%me} 〕*
-┃➸ Hai , ${%name}!
+┏━━  *〔 %me 〕*
+┃➸ Hai , %name!
 ┃
-┃➸ Tersisa *${%limit}*
-┃➸ Role *${%role}*
-┃➸ level *${%level}*
-┃➸ ${%totalexp} XP secara Total
+┃➸ Tersisa *%limit*
+┃➸ Role *%role*
+┃➸ level *%level*
+┃➸ %totalexp XP secara Total
 ┃
-┃➸ Tanggal: *${%week}*, *${%date}*
-┃➸ Tanggal Islam: *${%dateIslamic}*
-┃➸ Waktu: *${%time}*
-┃➸ Uptime: *${%uptime}* 
-┃➸ Database: ${%rtotalreg} dari ${%totalreg}
+┃➸ Tanggal: *%week*,%date*
+┃➸ Tanggal Islam: *%dateIslamic*
+┃➸ Waktu: *%time*
+┃➸ Uptime: *%uptime* 
+┃➸ Database: %rtotalreg} dari %totalreg
 ┃➸ *Follow My Instagram*
 ┃➸ *https://instagram.com/anfebn*
 ┗━━━━━━━━
@@ -130,7 +130,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!args[0]) {
     conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
-        "title": `${defaultMenu.before}`,
+        "title": `${ucapan()}, Kak ${name}\n\n${week} ${date}\n\n${time}\n\nDont Forget Follow\n\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
         "description": "Made With @anfebn",
         "buttonText": "Klik Disini",
         "listType": "SINGLE_SELECT",
@@ -402,4 +402,23 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+
+}
+
+function ucapan() { 
+  const time = moment.tz('Asia/Jakarta').format('HH')
+  res = "Selamat dinihari"
+  if (time >= 4) { 
+      res = "Selamat Pagi"
+  }
+  if (time > 10) { 
+      res = "Selamat Siang"
+  }
+  if (time >= 15) { 
+      res = "Selamat Sore"
+  } 
+  if (time >= 18) { 
+      res = "Selamat Malam"
+  } 
+  return res 
 }

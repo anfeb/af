@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anfeb/afr.git"
+    "url": "git+https://github.com/anfeb/af.git"
   },
   "keywords": [
     "whatsapp-bot"
@@ -17,9 +17,9 @@
   "author": "anfebn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anfeb/afr/issues"
+    "url": "https://github.com/anfeb/af/issues"
   },
-  "homepage": "https://github.com/anfeb/afr",
+  "homepage": "https://github.com/anfeb/af",
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "awesome-phonenumber": "^2.54.0",

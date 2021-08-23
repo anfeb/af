@@ -1,5 +1,6 @@
 let fs = require('fs')
 let moment = require('moment-timezone')
+let fetch = require('node-fetch')
 let path = require('path')
 let levelling = require('../lib/levelling')
 const defaultMenu = {

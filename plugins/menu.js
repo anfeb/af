@@ -32,7 +32,7 @@ ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
-  let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+  
 
   let d = new Date(new Date + 3600000)
 
@@ -154,7 +154,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!args[0]) {
     conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
-        "title": `${ucapan()},Kak${name}\n\n${week} ${date}\n\n${time}\n\nDont Forget Follow\n\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
+        "title": `${ucapan()},Kak${name}\n\n\nDont Forget Follow\n\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
         "description": "Made With @anfebn",
         "buttonText": "Klik Disini",
         "listType": "SINGLE_SELECT",

@@ -413,14 +413,13 @@ module.exports = {
     }
   },
   async delete(m) {
-    if (m.key.fromMe) return
     let chat = global.db.data.chats[m.key.remoteJid]
-    if (chat.delete) return
+    if (!chat.delete) return
     await this.sendButton(m.key.remoteJid, `
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
 ketik *.on delete* untuk mematikan pesan ini
-`.trim(), '', 'MATIKAN ANTI DELETE', ',on delete', {
+`.trim(), '', 'MATIKAN ANTI DELETE', ',off delete', {
       quoted: m.message,
       contextInfo: {
         mentionedJid: [m.participant]
@@ -433,7 +432,7 @@ ketik *.on delete* untuk mematikan pesan ini
     let users = global.db.data.users
     let user = users[from] || {}
     if (user.whitelist) return
-    if (!global.db.data.anticall) return
+    if (!global.db.data.settings.anticall) return
     switch (this.callWhitelistMode) {
       case 'mycontact':
         if (from in this.contacts && 'short' in this.contacts[from])

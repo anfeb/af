@@ -297,6 +297,7 @@ module.exports = {
             isOwner,
             isAdmin,
             isBotAdmin,
+            DevMode,
             isPrems,
             chatUpdate,
             isBlocked,

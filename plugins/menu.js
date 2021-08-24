@@ -32,6 +32,27 @@ ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+  let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+
+  let d = new Date(new Date + 3600000)
+
+  let locale = 'id'
+
+  let week = d.toLocaleDateString(locale, { weekday: 'long' })
+
+  let date = d.toLocaleDateString(locale, {
+
+    day: 'numeric',
+
+    month: 'long',
+
+    year: 'numeric'
+
+  })
+
+  let name = conn.getName(m.sender)
+
+  let xixi = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m ? { remoteJid: "status@broadcast" } : {}) }, message: { "locationMessage": { "name": "Bekasi", "address": "norestime", "mimetype": "image/jpeg", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('src/logo.jpg')} } }
   let tags
   let teks = `${args[0]}`.toLowerCase()
   if (teks == 'all') tags = {
@@ -133,7 +154,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!args[0]) {
     conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
-        "title": `${ucapan()}\n\n${week} ${date}\n\n${time}\n\nDont Forget Follow\n\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
+        "title": `${ucapan()},Kak${name}\n\n${week} ${date}\n\n${time}\n\nDont Forget Follow\n\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
         "description": "Made With @anfebn",
         "buttonText": "Klik Disini",
         "listType": "SINGLE_SELECT",

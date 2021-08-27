@@ -23,7 +23,7 @@ global.APIKeys = { // APIKey nya disini
   'https://pencarikode.xyz': 'pais',
   'https://api.xteam.xyz': 'HIRO',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
+  'https://api.zeks.xyz': 'anugerahfeb',
 }
 
 // Sticker WM

@@ -135,7 +135,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!args[0]) {
       conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
-        "title": `${ucapan()}\nKak, ${name}\n\nDont Forget Follow\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu`,
+        "title": `${ucapan()}\nKak, ${name}\n\nDont Forget Follow\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu\n\nBila Menu Tidak Bisa Di Klik\nKetik .? All`,
         "description": "@anfebn",
         "buttonText": "Klik Disini",
         "listType": "SINGLE_SELECT",
